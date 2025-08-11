@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced Calculator • Danjuma Gideon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="hero-left">
+        <h1>Advanced Calculator</h1>
+        <p class="subtitle">Responsive • Keyboard Support • History • Local Storage</p>
+      </div>
+      <div class="hero-right">
+        <button id="darkToggle" aria-pressed="false" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <section class="calculator-card" aria-label="Calculator">
+      <div class="display-row">
+        <input id="display" class="display" type="text" inputmode="decimal" aria-label="Calculator display" disabled />
+      </div>
+
+      <div class="btn-grid" role="group" aria-label="Calculator buttons">
+        <!-- Row 1 -->
+        <button class="btn fn" data-action="clear">C</button>
+        <button class="btn fn" data-action="clear-entry">CE</button>
+        <button class="btn fn" data-value="(">(</button>
+        <button class="btn fn" data-value=")">)</button>
+
+        <!-- Row 2 -->
+        <button class="btn operator" data-value="/">÷</button>
+        <button class="btn operator" data-value="*">×</button>
+        <button class="btn operator" data-value="-">−</button>
+        <button class="btn operator" data-value="+">+</button>
+
+        <!-- Row 3 -->
+        <button class="btn num" data-value="7">7</button>
+        <button class="btn num" data-value="8">8</button>
+        <button class="btn num" data-value="9">9</button>
+        <button class="btn action" data-action="calculate">=</button>
+
+        <!-- Row 4 -->
+        <button class="btn num" data-value="4">4</button>
+        <button class="btn num" data-value="5">5</button>
+        <button class="btn num" data-value="6">6</button>
+        <button class="btn num" data-value="1">1</button>
+
+        <!-- Row 5 -->
+        <button class="btn num" data-value="2">2</button>
+        <button class="btn num" data-value="3">3</button>
+        <button class="btn num" data-value="0">0</button>
+        <button class="btn num" data-value=".">.</button>
+      </div>
+    </section>
+
+    <section class="history-card" aria-label="Calculation history">
+      <div class="history-header">
+        <h2>History</h2>
+        <div class="history-actions">
+          <button id="exportBtn" title="Export history">Export</button>
+          <button id="clearHistoryBtn" title="Clear history">Clear History</button>
+        </div>
+      </div>
+      <ul id="historyList" class="history-list" aria-live="polite"></ul>
+    </section>
+
+    <footer class="footer">
+      <p>Built by <strong>Danjuma Gideon</strong> • Portfolio-ready project</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
